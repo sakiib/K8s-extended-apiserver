@@ -9,9 +9,9 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/spf13/afero"
 	"github.com/sakiib/K8s-extended-apiserver/lib/certstore"
 	"github.com/sakiib/K8s-extended-apiserver/lib/server"
+	"github.com/spf13/afero"
 	"k8s.io/client-go/util/cert"
 )
 
@@ -84,7 +84,7 @@ func main() {
 	// -----------------------------------------------------------------------------
 
 	cfg := server.Config{
-		Address: "127.0.0.2:8443",
+		Address:     "127.0.0.2:8443",
 		CACertFiles: []string{
 			// Only allow clients from main apiserver.
 			// store.CertFile("ca"),
